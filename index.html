@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    
+    <style>
+        *{
+            padding: 0%;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+
+        }
+        nav{
+            background: linear-gradient(rgb(170, 52, 188),rgb(6, 27, 104));
+            display: flex;
+            align-items: center;
+        }
+        .doc {
+            align-self: center;
+            height: 60px; /* Adjust the height as needed */
+             /* Maroon background color */
+            padding: 0 20px;
+            display: inline-block; /* Adjust padding as needed */
+        }
+
+        .doc a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+
+        ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        ul li{
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px; /* Adjust spacing between image and text */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="doc">
+            <a href="#">
+                <img src="logo.svg" alt="error">
+                Artly Artwork
+            </a>
+        </div>
+        
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Artwork</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

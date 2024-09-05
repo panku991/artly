@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Login</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./style.css">  
+    <link rel="icon" href="images/webicon.png">
+
+
+    <style>
+        /* Custom Background for Artistic Look */
+        body {
+            background-image: url('images/background_transparent.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Glass effect with 3D tilt */
+        .glass {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: perspective(1000px) rotateY(4deg);
+            max-width: 90%;
+            width: 100%;
+            margin: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover effect for glass container */
+        .glass:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .glass {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center text-gray-800">
+    <div class="glass">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-white">Welcome Back, Artist!</h1>
+            <p class="text-white italic">"Every artist was first an amateur."</p>
+        </div>
+
+        <div class="space-y-6">
+            <div>
+                <label for="email" class="block text-white text-sm font-medium mb-2">Email</label>
+                <input type="email" id="email" placeholder="Enter your email"
+                    class="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required
+                    autocomplete="off" />
+                <p id="email-error" class="text-red-500 text-xs italic mt-2"></p>
+            </div>
+            <div>
+                <label for="password" class="block text-white text-sm font-medium mb-2">Password</label>
+                <input type="password" id="password" placeholder="Enter your password"
+                    class="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required
+                    autocomplete="off" />
+            </div>
+            <div class="text-center">
+                <button id="SignIn_Submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg">
+                    Sign In
+                </button>
+            </div>
+            <p id="error-message" class="text-red-500 text-xs italic mt-4"></p>
+
+            <!-- New Home Page Link -->
+            <div class="text-center mt-4">
+                <p class="text-white">Want to go back? <a href="index.html" class="text-blue-500 underline">Go to Home
+                        Page</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="loginScript.js"></script>
+</body>
+
+</html>

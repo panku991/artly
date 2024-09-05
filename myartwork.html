@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Artworks</title>
+
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="images/webicon.png">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100">
+
+    <nav class=" w-full bg-white py-4 shadow-xl fixed z-10 top-0 border-b-[1px] border-gray-400">
+
+        <div class="w-full flex items-center justify-around mx-5 py-1 px-1">
+            <div class="flex items-center justify-center gap-3 ">
+                <img src="images/logo-for-light.png" alt="Logo" class="w-28">
+                <div>
+                    <h3 class="text-gray-800 font-extrabold text-2xl px-2">Here is my artwork!</h3>
+                    <h5 class="text-slate-500 font-light text-sm px-2 ">Where imagination meets creativity, captured in every stroke.</h5>
+                </div>
+            </div>
+            
+    
+            <div class="text-sm hidden sm:block">
+                <div class="flex items-center justify-center gap-1 ">
+                    <p class="text-gray-500 hidden md:block">Want to go back?</p> <a href="index.html" class="text-blue-500 underline">Go to Home Page</a>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+    
+    <!-- Artwork List -->
+    <div id="work" class="w-full px-[5%] sm:px-[3%] py-10 mt-20">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-12 py-6 artwork-list"
+                id="artwork-list"></div>
+        </div>
+    </div>
+
+    <!-- Full View Modal -->
+    <div id="full-view-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex flex-col gap-3 justify-center  items-center">
+        <div class="bg-white relative w-[90%] h-[70%] rounded-md max-w-4xl ">
+
+            <img id="close-modal" src="images/close-black.png" alt="" class="absolute top-4 right-4 w-6 cursor-pointer object-contain">
+
+            <img id="full-view-image" src="" alt=""
+                class="w-full max-w-[80%] h-auto max-h-[70%] object-contain rounded-sm mx-auto mt-12">
+
+            <div class="m-10 text-wrap object-contain">
+                <h1 id="full-view-title" class="text-2xl font-bold text-gray-800/90 object-contain">Title</h1>
+                <h3 id="full-view-description" class="text-xl font-semibold text-gray-700/90 object-contain">Description</h3>
+            </div>
+
+        </div>
+
+        <div class="flex items-center justify-around  bottom-0 object-contain ">
+            <a id="download-artwork" href="" download
+                class=" shadow-2xl px-10 py-3 border border-gray-500 rounded-full text-wrap flex items-center gap-2 bg-white hover:bg-green-100 object-contain">
+                Download <img src="images/download-icon.png" alt="download" class="w-4 object-contain">
+            </a>
+        </div>
+    </div>
+
+    <p id="no-artworks-message" style="display: none;">No artworks available.</p>
+
+    <script type="module" src="myartworkScript.js"></script>
+</body>
+
+</html>

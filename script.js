@@ -171,7 +171,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     spinner_contact_form_submit_btn.classList.remove('hidden');
     contact_form_submit_btn.querySelector('p').textContent = "Sending ... ";
-
+    
     const form = event.target;
     const formData = new FormData(form);
 
@@ -185,41 +185,40 @@ document.getElementById('contactForm').addEventListener('submit', async function
         const result = await response.json();
 
         const responseMessage = document.getElementById('responseMessage');
+        spinner_contact_form_submit_btn.classList.add('hidden');
 
         if (response.ok && result.success) {
             // Display success message
-            spinner_contact_form_submit_btn.classList.add('hidden');
-
+            
             contact_form_submit_btn.classList.add('bg-green-600');
-            contact_form_submit_btn.classList.remove('bg-black/80');
+            contact_form_submit_btn.classList.remove('bg-black');
+            
+
             contact_form_submit_btn.querySelector('p').textContent = "Message Sent ..! Thank You.";
 
-            form.reset(); // Clear the form after successful submission
+           // Clear the form after successful submission
         } else {
             // Display error message
-            spinner_contact_form_submit_btn.classList.add('hidden');
-
+            
             contact_form_submit_btn.classList.add('bg-red-600');
-            contact_form_submit_btn.classList.remove('bg-black/80');
+            contact_form_submit_btn.classList.remove('bg-black');
             contact_form_submit_btn.querySelector('p').textContent = "Oops!  Please try again.";
         }
     } catch (error) {
         console.error("Error:", error);
 
-        spinner_contact_form_submit_btn.classList.remove('hidden');
-
         contact_form_submit_btn.classList.add('bg-red-600');
-        contact_form_submit_btn.classList.remove('bg-black/80');
+        contact_form_submit_btn.classList.remove('bg-black');
         contact_form_submit_btn.querySelector('p').textContent = "Error: Unable to submit form.";
 
     }
 
     setTimeout(function () {
         contact_form_submit_btn.querySelector('p').textContent = "Send Message";
-        contact_form_submit_btn.classList.add('bg-black/80');
+        contact_form_submit_btn.classList.add('bg-black');
         contact_form_submit_btn.classList.remove('bg-green-600');
         contact_form_submit_btn.classList.remove('bg-red-600');
-
+        form.reset(); 
     }, 3000);
 
 });

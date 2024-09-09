@@ -68,13 +68,14 @@ onValue(databaseRef(db, 'artworks'), (snapshot) => {
             const artwork = artworksData[key];
             const card = document.createElement('div');
             card.className = 'bg-white p-6 rounded-sm shadow-xl text-start relative';
+            card.onclick = () => openFullViewModal(index);
 
             const img = document.createElement('img');
             img.src = artwork.imageUrl;
             img.alt = artwork.title;
             img.loading = "lazy";
             img.className = 'mb-4 mx-auto h-[250px] object-cover rounded-sm cursor-pointer';
-            img.onclick = () => openFullViewModal(index);
+            //img.onclick = () => openFullViewModal(index);
             card.appendChild(img);
 
             const title = document.createElement('h3');

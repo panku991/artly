@@ -69,22 +69,22 @@ onValue(databaseRef(db, 'artworks'), (snapshot) => {
             const card = document.createElement('div');
             card.className = 'bg-white p-6 rounded-sm shadow-xl text-start relative';
             card.onclick = () => openFullViewModal(index);
-
+            
             const img = document.createElement('img');
             img.src = artwork.imageUrl;
             img.alt = artwork.title;
             img.loading = "lazy";
             img.className = 'mb-4 mx-auto h-[250px] object-cover rounded-sm cursor-pointer';
-            //img.onclick = () => openFullViewModal(index);
+            // img.onclick = () => openFullViewModal(index);
             card.appendChild(img);
 
             const title = document.createElement('h3');
-            title.className = 'text-2xl font-bold mb-2 text-wrap turncate line-clamp-2 overflow-hidden object-contain';
+            title.className = 'text-2xl font-bold mb-2 break-words whitespace-normal ';
             title.textContent = capitalizeSentences(artwork.title);
             card.appendChild(title);
 
             const description = document.createElement('p');
-            description.className = 'text-gray-600 text-wrap turncate line-clamp-2 overflow-hidden object-contain';
+            description.className = 'text-gray-600 break-words whitespace-normal ';
             description.textContent = capitalizeSentences(artwork.description);
             card.appendChild(description);
 

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /index.html
+Allow: /myartwork.html
+Disallow: /images/
+Disallow: /images/index.html
+Disallow: /post.html
+Disallow: /login.html
+
+Sitemap: https://artlyartwork.vercel.app/sitemap.xml

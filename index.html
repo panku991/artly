@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prachee Bharti - Artist Portfolio | Paintings, Sketches, Art Services</title>
+    <meta name="description"
+        content="Explore the portfolio of Prachee Bharti, a talented artist specializing in sketching, oil painting, and abstract art. View and purchase original artwork directly from the artist. Discover her latest works and creative journey." />
+
+    <meta name="keywords"
+        content="Prachee Bharti, Prachee Bharti artist, Prachee Bharti portfolio, Prachee Bharti art, Prachee Bharti paintings, Prachee Bharti sketches, Prachee Bharti artwork, Prachee Bharti gallery, Prachee Bharti contemporary art, Prachee Bharti abstract art, Prachee Bharti oil paintings, Prachee Bharti art collection, Prachee Bharti exhibitions, Prachee Bharti artist profile, Prachee Bharti visual art, Prachee Bharti painting collection, Prachee Bharti artwork showcase, Prachee Bharti art showcase, Prachee Bharti modern art, Prachee Bharti artistic work, Prachee Bharti professional artist, Prachee Bharti art studio, Prachee Bharti art pieces, Prachee Bharti painting portfolio, Prachee Bharti art details, Prachee Bharti visual portfolio, Prachee Bharti art trends, Prachee Bharti creative portfolio, Prachee Bharti artist gallery" />
+
+    <meta name="author" content="Prachee Bharti">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Prachee Bharti - Artist Portfolio">
+    <meta property="og:description"
+        content="Prachee Bharti - Explore the portfolio of Prachee Bharti, a talented artist specializing in sketching, oil painting, and abstract art. View and purchase original artwork directly from the artist. Discover her latest works and creative journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artlyartwork.vercel.app">
+
+    <meta property="og:image:alt" content="Artwork by - Prachee Bharti">
+    <meta property="og:site_name" content="Prachee Bharti - Artist Portfolio | Paintings, Sketches, Art Services">
+    <meta property="og:locale" content="en_US">
+
+
+
+    <link rel="stylesheet" href="./style.css">
+
+
+    <!-- Standard Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Apple Touch Icon (For iOS home screen) -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Android Chrome Icon -->
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+
+    <meta name="DC.title" content="Prachee Bharti - Artist Portfolio">
+    <meta name="DC.creator" content="Prachee Bharti">
+    <meta name="DC.subject" content="paintings, sketches, artist, portfolio, custom artwork">
+    <meta name="DC.description"
+        content="Portfolio of Prachee Bharti, showcasing paintings and sketches, including information on her art services.">
+    <meta name="DC.publisher" content="Prachee Bharti">
+    <meta name="DC.contributor" content="Prachee Bharti">
+    <meta name="DC.date" content="2024-09-09">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://artlyartwork.vercel.app">
+    <meta name="DC.language" content="en">
+    <meta name="DC.coverage" content="India">
+    <meta name="DC.rights" content="All rights reserved.">
+
+    <link rel="canonical" href="https://artlyartwork.vercel.app">
+
+
+    <style>
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            transition: backdrop-filter 0.3s ease;
+            background-color: white;
+
+        }
+    </style>
+
+</head>
+
+<body class="overflow-x-hidden ">
+
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+        <img loading="lazy" src="images/header-bg-color.png" alt="Header Background Pic" class="w-full">
+    </div>
+
+    <!-- navbar  -->
+    <nav id="navbar" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-2 flex items-center justify-between z-50 shadow-md">
+
+        <a href="https://artlyartwork.vercel.app"><img loading="lazy" src="images/logo-for-light.png"
+                alt="Logo - Artly Artwork" class="w-28 cursor-pointer mr-14"></a>
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-md bg-opacity-50">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+
+            <a href="#contact"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 ">
+                Contact
+                <img loading="lazy" src="images/arrow-icon.png" alt="Arrow-Icon" class="w-3">
+            </a>
+
+
+            <button class="block md:hidden ml-3 _openMenu_">
+                <img loading="lazy" src="images/menu-black.png" alt="Menu-Icon" class="w-6">
+            </button>
+
+        </div>
+
+
+        <!-- mobile navbar -->
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 gap-4">
+
+            <div class="absolute right-6 top-6 _closeMenu_ ">
+                <img loading="lazy" src="images/close-black.png" alt="Close-Icon" class="w-5 cursor-pointer">
+            </div>
+
+            <li><a href="#top" class="_closeMenu_">Home</a></li>
+            <li><a href="#about" class="_closeMenu_">About me</a></li>
+            <li><a href="#services" class="_closeMenu_">Services</a></li>
+            <li><a href="#work" class="_closeMenu_">My Work</a></li>
+            <li><a href="#contact" class="_closeMenu_">Contact me</a></li>
+        </ul>
+
+
+    </nav>
+
+
+
+    <!-- header -->
+
+    <div id="top"
+        class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+
+        <img id="header_profile_img" src="" alt="Profile Picture - Prachee Bharti" class="hidden rounded-full w-32"
+            style="width: 128px; height: 128px; object-fit: cover;" loading="lazy">
+
+        <div id="skeleton_header_profile_img" class=" rounded-full w-32 inset-0 bg-gray-300 animate-pulse"
+            style="width: 128px; height: 128px; "></div>
+
+
+
+
+        <h1 class="flex items-center gap-2 text-xl md:text-2xl mb-3 font-normal">Hi! I'm Prachee Bharti
+            <img loading="lazy" src="images/hand-icon.png" alt="Hand-Icon" class="w-6">
+        </h1>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">Fine Art Painter & Visual Storyteller</h1>
+        <p class="max-w-2xl mx-auto">I create vibrant, expressive artworks that tell stories and capture emotions,
+            specializing in a range of mediums and artistic styles. Explore my artistic journey through my work!</p>
+
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="#contact"
+                class="px-10 py-3 border rounded-full bg-gradient-to-tr from-[#b820e6] to-[#da7d20]  text-white text-wrap flex items-center gap-2">Contact
+                me
+                <img loading="lazy" src="images/right-arrow-white.png" alt="Arrow-Icon" class="w-4"></a>
+
+            <a href="images/PracheeBharti.pdf" download
+                class="px-10 py-3 border border-gray-500 rounded-full text-wrap flex items-center gap-2 bg-white">Download
+                CV <img src="images/download-icon.png" alt="Resume - Prachee Bharti - Download" class="w-4"></a>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- ........... about me ............... -->
+
+
+    <div id="about" class="w-full px-[12%] py-10 shadow-sm scroll-mt-20 bg-slate-100/50">
+        <h4 class="text-center mb-2 text-lg ">Introduction</h4>
+        <h2 class="text-center text-5xl">About me</h2>
+
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto">
+
+                <img id="about_user_img" src="" alt="Profile Picture - Prachee Bharti"
+                    class="w-64 h-64 sm:w-80 rounded-3xl max-w-none hidden"
+                    style="width: 320px; height: 440px; object-fit: cover;" loading="lazy">
+
+                <div id="skeleton_about_user_img" class=" rounded-3xl inset-0 bg-gray-300 animate-pulse"
+                    style="width: 320px; height: 440px;"></div>
+
+            </div>
+            <div class="flex-1">
+                <h1 class="mb-10 max-w-2xl">
+                    Hi! I'm Prachee Bharti, a passionate fine artist who explores the human experience and nature
+                    through color, texture, and form. My work is a fusion of various techniques, from traditional
+                    mediums like oil and acrylic to digital expressions. Let’s explore the beauty of the world together
+                    through art!
+                </h1>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li
+                        class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img loading="lazy" src="images/art.png" alt="Mediums - Prachee Bharti" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Mediums</h3>
+                        <p class="text-gray-600 text-sm">Oil, Acrylic, Watercolor, Charcoal, Digital Art</p>
+                    </li>
+
+
+                    <li
+                        class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img loading="lazy" src="images/mortarboard.png" alt="Education - Prachee Bharti"
+                            class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+                        <p class="text-gray-600 text-sm">Bachelor's in Fine Arts</p>
+                    </li>
+
+
+                    <li
+                        class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img loading="lazy" src="images/exhibition.png" alt="Exhibitions - Prachee Bharti"
+                            class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Exhibitions</h3>
+                        <p class="text-gray-600 text-sm">Participated in over 5 exhibitions</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Services Section -->
+
+
+    <div id="services" class="w-full px-[5%] sm:px-[12%] py-10 shadow-sm scroll-mt-20 bg-white">
+        <div class="container mx-auto px-4">
+
+            <h4 class="text-center mb-2 text-lg">What I offer</h4>
+            <h2 class="text-center text-5xl">My Services</h2>
+            <h1 class="text-center max-w-2xl mx-auto mt-5 mb-12">Explore my artistic services ranging from customized
+                artworks to digital art commissions, each crafted with attention to detail and a unique creative vision.
+            </h1>
+
+
+
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card -->
+                <div
+                    class="bg-white p-6 rounded-sm shadow-lg text-center cursor-pointer hover:bg-[#f3defa] hover:-translate-y-1 duration-500">
+                    <img loading="lazy" src="images/service_sketching.png" alt="Sketching - Prachee Bharti"
+                        class="mb-4 mx-auto h-[250px] object-cover rounded-sm">
+                    <h3 class="text-2xl font-bold mb-2">Sketching</h3>
+                    <h1 class="text-gray-600">Detailed and expressive pencil sketches capturing moments and emotions.
+                    </h1>
+                </div>
+
+                <!-- Service Card -->
+                <div
+                    class="bg-white p-6 rounded-sm shadow-lg text-center cursor-pointer hover:bg-[#f3defa] hover:-translate-y-1 duration-500">
+                    <img loading="lazy" src="images/service_oil_painting.png" alt="Oil Painting - Prachee Bharti"
+                        class="mb-4 mx-auto h-[250px] object-cover rounded-sm">
+                    <h3 class="text-2xl font-bold mb-2">Oil Painting</h3>
+                    <h1 class="text-gray-600">Vibrant oil paintings that bring life and depth to any subject, from
+                        portraits to landscapes.</h1>
+                </div>
+
+                <!-- Service Card -->
+                <div
+                    class="bg-white p-6 rounded-sm shadow-lg text-center cursor-pointer hover:bg-[#f3defa] hover:-translate-y-1 duration-500">
+                    <img src="images/service_digital_art.png" alt="Digital Art - Prachee Bharti"
+                        class="mb-4 mx-auto h-[250px] object-cover rounded-sm">
+                    <h3 class="text-2xl font-bold mb-2">Digital Art</h3>
+                    <h1 class="text-gray-600">Modern and dynamic digital artwork designed for various purposes,
+                        including
+                        prints, logos, and custom projects.</h1>
+                </div>
+
+                <!-- Service Card -->
+                <div
+                    class="bg-white p-6 rounded-sm shadow-lg text-center cursor-pointer hover:bg-[#f3defa] hover:-translate-y-1 duration-500">
+                    <img loading="lazy" src="images/service_water_color_painting.png"
+                        alt="Watercolor Painting - Prachee Bharti"
+                        class="mb-4 mx-auto h-[250px] object-cover rounded-sm">
+                    <h3 class="text-2xl font-bold mb-2">Watercolor Painting</h3>
+                    <h1 class="text-gray-600">Soft and delicate watercolor paintings.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- My Work Section -->
+
+    <div id="work" class="w-full px-[5%] sm:px-[12%] py-10 shadow-md scroll-mt-20 bg-gray-300">
+        <div class="container mx-auto px-4">
+            <!-- <h2 class="text-4xl font-bold text-center mb-8">My Latest Work</h2> -->
+
+            <h4 class="text-center mb-2 text-lg">Portfolio</h4>
+            <h2 class="text-center text-5xl">My Artworks</h2>
+            <h1 class="text-center max-w-2xl mx-auto mt-5 mb-12">Browse through a selection of my finest works,
+                showcasing my artistic journey and diverse range of styles.</h1>
+
+
+
+            <div id="artwork_list_home" class="grid grid-cols-1 md:grid-cols-3 gap-8 py-6">
+
+
+            </div>
+
+            <p id="no_artworks_message_home" style="display: none;" class="text-center text-gray-800">No artworks
+                available.</p>
+
+            <a id="show_more_artwork" href="myartwork.html"
+                class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#f9c0d5] duration-500 ">Show
+                more
+                <img src="images/right-arrow-bold.png" alt="Right-Arrow" class="w-4">
+            </a>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ............... contact ............ -->
+
+
+
+
+    <div id="contact"
+        class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('images/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]">
+
+        <h4 class="text-center mb-2 text-lg">Get in Touch</h4>
+        <h2 class="text-center text-5xl">Contact me</h2>
+        <h3 class="text-center max-w-2xl mx-auto mt-5 mb-12">Whether you're looking for a commissioned piece or just
+            want
+            to chat about art, feel free to reach out!</h3>
+
+        <form id="contactForm" method="POST" class="max-w-2xl mx-auto">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="b4f715c6-7572-4e9a-9501-733fcf4ce182">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 mt-10 mb-8 gap-6">
+                <input name="Name" type="text" placeholder="Enter your name"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" required>
+                <input name="Email" type="email" placeholder="Enter your email"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" required>
+            </div>
+
+            <textarea name="Message" id="message" rows="6" placeholder="Enter your message"
+                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+                required></textarea>
+
+            <button id="contact-form-submit-btn" type="submit"
+                class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500">
+                <div id="spinner-contact-form-submit-btn"
+                    class="hidden animate-spin rounded-full h-6 w-6 border-t-2 border-x-2 border-blue-300 border-solid ">
+                </div>
+                <p>Send Message</p>
+                <img loading="lazy" src="images/right-arrow-white.png" alt="Right-Arrow" class="w-4">
+            </button>
+
+            <div id="responseMessage" class="text-center mt-4"></div>
+
+        </form>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- .................... footer ................ -->
+
+
+    <div class="mt-20">
+        <div class="text-center">
+            <img loading="lazy" src="images/logo-for-light.png" alt="Logo - Artly Artwork" class="w-28 mx-auto mb-2">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img loading="lazy" src="images/mail_icon.png" alt="Email - Prachee Bharti" class="w-6">
+                pracheebharti878@gmail.com
+            </div>
+        </div>
+
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+            <h1>© 2024 Prachee Bharti. All rights reserved. </h1>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                <li><a href="https://www.instagram.com/artly_53" target="_blank">Instagram </a></li>
+                <li><a href="https://www.linkedin.com/in/prachee-bharti-624095308/" target="_blank">Linkdin </a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

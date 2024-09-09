@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Artworks - Prachee Bharti</title>
+    <meta name="description"
+        content="Explore the portfolio of Prachee Bharti, a talented artist specializing in sketching, oil painting, and abstract art. View and purchase original artwork directly from the artist. Discover her latest works and creative journey." />
+
+    <meta name="keywords"
+        content="Prachee Bharti, Prachee Bharti artist, Prachee Bharti portfolio, Prachee Bharti art, Prachee Bharti paintings, Prachee Bharti sketches, Prachee Bharti artwork, Prachee Bharti gallery, Prachee Bharti contemporary art, Prachee Bharti abstract art, Prachee Bharti oil paintings, Prachee Bharti art collection, Prachee Bharti exhibitions, Prachee Bharti artist profile, Prachee Bharti visual art, Prachee Bharti painting collection, Prachee Bharti artwork showcase, Prachee Bharti art showcase, Prachee Bharti modern art, Prachee Bharti artistic work, Prachee Bharti professional artist, Prachee Bharti art studio, Prachee Bharti art pieces, Prachee Bharti painting portfolio, Prachee Bharti art details, Prachee Bharti visual portfolio, Prachee Bharti art trends, Prachee Bharti creative portfolio, Prachee Bharti artist gallery" />
+
+    <meta name="author" content="Prachee Bharti">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Prachee Bharti - Artist Portfolio">
+    <meta property="og:description"
+        content="Prachee Bharti - Explore the portfolio of Prachee Bharti, a talented artist specializing in sketching, oil painting, and abstract art. View and purchase original artwork directly from the artist. Discover her latest works and creative journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artlyartwork.vercel.app">
+
+    <meta property="og:image:alt" content="Artwork by - Prachee Bharti">
+    <meta property="og:site_name" content="Prachee Bharti - Artist Portfolio | Paintings, Sketches, Art Services">
+    <meta property="og:locale" content="en_US">
+
+
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Standard Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Apple Touch Icon (For iOS home screen) -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Android Chrome Icon -->
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+
+    <meta name="DC.title" content="Prachee Bharti - Artist Portfolio">
+    <meta name="DC.creator" content="Prachee Bharti">
+    <meta name="DC.subject" content="paintings, sketches, artist, portfolio, custom artwork">
+    <meta name="DC.description"
+        content="Portfolio of Prachee Bharti, showcasing paintings and sketches, including information on her art services.">
+    <meta name="DC.publisher" content="Prachee Bharti">
+    <meta name="DC.contributor" content="Prachee Bharti">
+    <meta name="DC.date" content="2024-09-09">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://artlyartwork.vercel.app">
+    <meta name="DC.language" content="en">
+    <meta name="DC.coverage" content="India">
+    <meta name="DC.rights" content="All rights reserved.">
+
+    <link rel="canonical" href="https://artlyartwork.vercel.app">
+
+
+
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100">
+
+    <nav class=" w-full bg-white py-4 shadow-xl fixed z-10 top-0 border-b-[1px] border-gray-400">
+
+        <div class="w-full flex items-center justify-around mx-5 py-1 px-1">
+            <div class="flex items-center justify-center gap-3 ">
+                <img loading="lazy" src="images/logo-for-light.png" alt="Logo - Artly Artwork" class="w-28">
+                <div>
+                    <h3 class="text-gray-800 font-extrabold text-2xl px-2">Here is my artwork!</h3>
+                    <h5 class="text-slate-500 font-light text-sm px-2 ">Where imagination meets creativity, captured in
+                        every stroke.</h5>
+                </div>
+            </div>
+
+
+            <div class="text-sm hidden sm:block">
+                <div class="flex items-center justify-center gap-1 ">
+                    <p class="text-gray-500 hidden md:block">Want to go back?</p> <a href="index.html"
+                        class="text-blue-500 underline">Go to Home Page</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- Artwork List -->
+    <div id="work" class="w-full px-[5%] sm:px-[3%] py-10 mt-20">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-12 py-6 artwork-list"
+                id="artwork-list"></div>
+        </div>
+    </div>
+
+    <!-- Full View Modal -->
+    <div id="full-view-modal"
+        class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex flex-col gap-3 justify-center  items-center">
+        <div class="bg-white relative w-[90%] h-[70%] rounded-md max-w-4xl ">
+
+            <img loading="lazy" id="close-modal" src="images/close-black.png" alt="Close-Icon"
+                class="absolute top-4 right-4 w-6 cursor-pointer object-contain">
+
+            <img loading="lazy" id="full-view-image" src="" alt="Artwork-Image"
+                class="w-full max-w-[80%] h-auto max-h-[70%] object-contain rounded-sm mx-auto mt-12">
+
+            <div class="m-10 text-wrap object-contain">
+                <h1 id="full-view-title" class="text-2xl font-bold text-gray-800/90 object-contain">Title</h1>
+                <h3 id="full-view-description" class="text-xl font-semibold text-gray-700/90 object-contain">Description
+                </h3>
+            </div>
+
+        </div>
+
+        <div class="flex items-center justify-around  bottom-0 object-contain ">
+            <a id="download-artwork" href="" download
+                class=" shadow-2xl px-10 py-3 border border-gray-500 rounded-full text-wrap flex items-center gap-2 bg-white hover:bg-green-100 object-contain">
+                Download <img src="images/download-icon.png" alt="Download-Icon" class="w-4 object-contain">
+            </a>
+        </div>
+    </div>
+
+    <p id="no-artworks-message" style="display: none;">No artworks available.</p>
+
+    <script type="module" src="myartworkScript.js"></script>
+</body>
+
+</html>

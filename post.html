@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artist Dashboard</title>
+    <meta name="description"
+        content="Explore the portfolio of Prachee Bharti, a talented artist specializing in sketching, oil painting, and abstract art. View and purchase original artwork directly from the artist. Discover her latest works and creative journey." />
+
+    <meta name="keywords"
+        content="Prachee Bharti, Prachee Bharti artist, Prachee Bharti portfolio, Prachee Bharti art, Prachee Bharti paintings, Prachee Bharti sketches, Prachee Bharti artwork, Prachee Bharti gallery, Prachee Bharti contemporary art, Prachee Bharti abstract art, Prachee Bharti oil paintings, Prachee Bharti art collection, Prachee Bharti exhibitions, Prachee Bharti artist profile, Prachee Bharti visual art, Prachee Bharti painting collection, Prachee Bharti artwork showcase, Prachee Bharti art showcase, Prachee Bharti modern art, Prachee Bharti artistic work, Prachee Bharti professional artist, Prachee Bharti art studio, Prachee Bharti art pieces, Prachee Bharti painting portfolio, Prachee Bharti art details, Prachee Bharti visual portfolio, Prachee Bharti art trends, Prachee Bharti creative portfolio, Prachee Bharti artist gallery" />
+
+    <meta name="author" content="Prachee Bharti">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Prachee Bharti - Artist Portfolio">
+    <meta property="og:description"
+        content="Prachee Bharti - Explore the portfolio of Prachee Bharti, a talented artist specializing in sketching, oil painting, and abstract art. View and purchase original artwork directly from the artist. Discover her latest works and creative journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artlyartwork.vercel.app">
+
+    <meta property="og:image:alt" content="Artwork by - Prachee Bharti">
+    <meta property="og:site_name" content="Prachee Bharti - Artist Portfolio | Paintings, Sketches, Art Services">
+    <meta property="og:locale" content="en_US">
+
+
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Standard Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Apple Touch Icon (For iOS home screen) -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Android Chrome Icon -->
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+
+    <meta name="DC.title" content="Prachee Bharti - Artist Portfolio">
+    <meta name="DC.creator" content="Prachee Bharti">
+    <meta name="DC.subject" content="paintings, sketches, artist, portfolio, custom artwork">
+    <meta name="DC.description"
+        content="Portfolio of Prachee Bharti, showcasing paintings and sketches, including information on her art services.">
+    <meta name="DC.publisher" content="Prachee Bharti">
+    <meta name="DC.contributor" content="Prachee Bharti">
+    <meta name="DC.date" content="2024-09-09">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://artlyartwork.vercel.app">
+    <meta name="DC.language" content="en">
+    <meta name="DC.coverage" content="India">
+    <meta name="DC.rights" content="All rights reserved.">
+
+    <link rel="canonical" href="https://artlyartwork.vercel.app">
+
+
+
+
+
+    <style>
+        /* Custom Background for Artistic Look */
+        body {
+            background-image: url('images/background_transparent.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Smaller artwork card styles */
+        .artwork-card {
+            max-width: 300px;
+            max-height: 400px;
+            position: relative;
+            /* Ensure relative positioning for delete button */
+        }
+
+        .artwork-image {
+            max-height: 150px;
+            object-fit: cover;
+        }
+
+        .delete-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .delete-btn svg {
+            fill: #f52929;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-800 text-white">
+    <!-- Container for Title and Subtitle -->
+    <div class="p-6 flex justify-between items-center">
+        <!-- Title and Subtitle -->
+        <div>
+            <h1 class="text-3xl font-bold">Your Dashboard</h1>
+            <p class="text-lg italic">"Express yourself through your art!"</p>
+        </div>
+        <!-- Logout Button -->
+        <button id="logout-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg">
+            Logout
+        </button>
+    </div>
+
+    <!-- Submit New Artwork Section -->
+    <div class="p-6 flex flex-col lg:flex-row gap-8 shadow-2xl">
+        <!-- Form for New Artwork -->
+        <div class="flex-1 bg-white p-6 rounded-lg shadow-xl text-gray-800">
+            <h2 class="text-2xl font-semibold mb-4">Submit New Artwork</h2>
+            <form id="artwork-form" class="space-y-4">
+                <div>
+                    <label for="title" class="block text-gray-700 text-sm font-medium mb-2">Title</label>
+                    <input type="text" id="title" placeholder="Enter artwork title" required
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required />
+                </div>
+                <div>
+                    <label for="description" class="block text-gray-700 text-sm font-medium mb-2">Description</label>
+                    <textarea id="description" rows="4" placeholder="Enter artwork description" required
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required></textarea>
+                </div>
+                <div>
+                    <label for="image" class="block text-gray-700 text-sm font-medium mb-2">Artwork Image</label>
+                    <input type="file" id="image" accept="image/*" required
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required />
+                </div>
+                <div class="text-center">
+                    <button id="upload-artwrok-btn" type="submit"
+                        class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg flex items-center justify-center gap-2">
+                        <div id="spinner-upload-artwork-btn"
+                            class="hidden animate-spin rounded-full h-6 w-6 border-t-2 border-x-2 border-blue-300 border-solid ">
+                        </div>
+                        <p>Upload Artwork</p>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Live Preview -->
+        <div class="flex-1 bg-white p-6 rounded-lg shadow-xl text-gray-800">
+            <h2 class="text-2xl font-semibold mb-4">Preview</h2>
+            <div id="preview-card" class="bg-white p-6 rounded-sm shadow-xl text-start">
+                <img loading="lazy" src="images/art_sample_1.png" alt="Artwork-Image-Preivew" id="preview-image"
+                    class="mb-4 mx-auto h-[150px] object-cover rounded-sm">
+                <h3 id="preview-title" class="text-2xl font-bold mb-2">Artwork Title</h3>
+                <p id="preview-description" class="text-gray-600">Artwork description</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- porfile images update section  -->
+
+
+    <div>
+        <div
+            class="w-full bg-inherit bg flex flex-col items-center justify-center p-6 backdrop-blur-md rounded-lg shadow-xl">
+
+            <h2 class="text-2xl font-semibold mb-4">Update Profile and User Images</h2>
+
+            <div class="flex flex-col sm:flex-row gap-12 mt-10 justify-between  ">
+
+                <!-- Profile Image Upload -->
+                <div class="mb-6 ">
+                    <h3 class="text-lg mb-2">Profile Image</h3>
+
+                    <img loading="lazy" id="profile-image-preview" src="" alt="Profile-Image"
+                        class="hidden rounded-full mb-3" style="width: 128px; height: 128px; object-fit: cover;">
+
+                    <div id="skeleton-profile-image-preview" class="rounded-full inset-0 bg-gray-300 animate-pulse mb-3"
+                        style="width: 128px; height: 128px;"></div>
+
+                    <input type="file" id="profile-image-input" accept="image/*" class="block w-full text-white mb-2">
+
+                    <button type="submit" id="upload-profile-image-btn"
+                        class=" bg-blue-600  text-white font-bold py-2 px-4 rounded-lg shadow-lg flex items-center justify-center gap-2">
+
+                        <div id="spinner-upload-profile-image-btn"
+                            class="hidden animate-spin rounded-full h-6 w-6 border-t-2 border-x-2 border-blue-300 border-solid ">
+                        </div>
+                        <p>Upload Image </p>
+                    </button>
+                </div>
+
+
+
+                <!-- User Image Upload -->
+                <div>
+                    <h3 class="text-lg mb-2">User Image</h3>
+
+                    <img loading="lazy" id="user-image-preview" src="" alt="Profile-Image"
+                        class=" hidden rounded-3xl mb-3" style="width: 320px; height: 440px; object-fit: cover;">
+
+                    <div id="skeleton-user-image-preview" class="rounded-3xl inset-0 bg-gray-300 animate-pulse mb-3"
+                        style="width: 320px; height: 440px;"></div>
+
+
+
+                    <input type="file" id="user-image-input" accept="image/*" class="block w-full text-white mb-2">
+                    <button type="submit" id="upload-user-image-btn"
+                        class=" bg-blue-600  text-white font-bold py-2 px-4 rounded-lg shadow-lg flex items-center justify-center gap-2">
+
+                        <div id="spinner-upload-user-image-btn"
+                            class="hidden animate-spin rounded-full h-6 w-6 border-t-2 border-x-2 border-blue-300 border-solid ">
+                        </div>
+                        <p>Upload Image</p>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Artwork List Section -->
+    <div class="p-6 artwork-section mt-8 shadow-lg">
+        <h2 class="text-2xl font-semibold mb-10 text-center">Your Artworks</h2>
+        <div id="artwork-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 px-7">
+            <!-- Artwork items will be dynamically added here -->
+        </div>
+        <!-- Message to display if no artworks are found -->
+        <p id="no-artworks-message" class="text-center text-gray-400 mt-4">No artworks available. Please add some
+            artworks to display them here.</p>
+    </div>
+
+
+
+
+    <script type="module" src="postScript.js"></script>
+</body>
+
+</html>

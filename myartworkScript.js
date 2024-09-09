@@ -79,12 +79,12 @@ onValue(databaseRef(db, 'artworks'), (snapshot) => {
             card.appendChild(img);
 
             const title = document.createElement('h3');
-            title.className = 'text-2xl font-bold mb-2';
+            title.className = 'text-2xl font-bold mb-2 text-wrap';
             title.textContent = capitalizeSentences(artwork.title);
             card.appendChild(title);
 
             const description = document.createElement('p');
-            description.className = 'text-gray-600';
+            description.className = 'text-gray-600 text-wrap';
             description.textContent = capitalizeSentences(artwork.description);
             card.appendChild(description);
 

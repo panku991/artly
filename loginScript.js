@@ -74,6 +74,10 @@ loginForm.addEventListener('submit', (event) => {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
+            spinner_login_form_submit_btn.classList.add('hidden');
+            loginForm.reset();
+            isSubmitting = false;
+             login_form_submit_btn.querySelector('p').textContent = "Sign In";
             window.location.href = "post.html";
         })
         .catch((error) => {
